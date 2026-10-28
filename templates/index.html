@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScamShield AI | Ansari Arif</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #07111f;
+            color: #eaf2ff;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #20334d;
+            background: #0b1729;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .shield {
+            background: #123d75;
+            padding: 10px;
+            border-radius: 12px;
+        }
+
+        .brand span {
+            color: #48a5ff;
+        }
+
+        .owner {
+            color: #9eb5d5;
+            font-size: 13px;
+        }
+
+        main {
+            max-width: 850px;
+            margin: 65px auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .tag {
+            display: inline-block;
+            color: #68b5ff;
+            border: 1px solid #24518a;
+            background: #102746;
+            padding: 8px 14px;
+            border-radius: 25px;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: clamp(32px, 6vw, 48px);
+            margin: 20px 0 12px;
+        }
+
+        h1 span {
+            color: #48a5ff;
+        }
+
+        .subtitle {
+            color: #9eb1cc;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .panel {
+            background: #0d1c30;
+            border: 1px solid #233d5e;
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: 0 20px 60px #0005;
+        }
+
+        .panel h2 {
+            margin-top: 0;
+            font-size: 21px;
+        }
+
+        label {
+            display: block;
+            margin: 20px 0 10px;
+            color: #cbdcf3;
+            font-size: 14px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 155px;
+            resize: vertical;
+            border-radius: 12px;
+            border: 1px solid #294666;
+            background: #071426;
+            color: #ffffff;
+            padding: 16px;
+            font: inherit;
+            line-height: 1.6;
+            outline: none;
+        }
+
+        textarea:focus {
+            border-color: #48a5ff;
+            box-shadow: 0 0 0 3px #48a5ff20;
+        }
+
+        textarea::placeholder {
+            color: #7187a4;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 17px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #1675e8, #369dff);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            filter: brightness(1.12);
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 12px;
+            background: #10233b;
+            border: 1px solid #2b4d73;
+            overflow-wrap: anywhere;
+        }
+
+        .result h3 {
+            margin-top: 0;
+        }
+
+        .result p {
+            line-height: 1.6;
+        }
+
+        .tips {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 22px;
+        }
+
+        .tip {
+            padding: 18px 12px;
+            border: 1px solid #203852;
+            background: #0b192b;
+            border-radius: 13px;
+            text-align: center;
+        }
+
+        .tip .icon {
+            font-size: 25px;
+        }
+
+        .tip h3 {
+            font-size: 14px;
+        }
+
+        .tip p {
+            font-size: 12px;
+            color: #9eb1cc;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            color: #8196b2;
+            font-size: 13px;
+            border-top: 1px solid #20334d;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 18px;
+                align-items: flex-start;
+                gap: 10px;
+                flex-direction: column;
+            }
+
+            main {
+                margin: 35px auto;
+            }
+
+            .panel {
+                padding: 20px;
+            }
+
+            .tips {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <div class="shield">🛡️</div>
+            <div>ScamShield <span>AI</span></div>
+        </div>
+
+        <div class="owner">Created by Ansari Arif</div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="tag">AI-POWERED MESSAGE PROTECTION</div>
+
+            <h1>Think Before You <span>Trust.</span></h1>
+
+            <p class="subtitle">
+                Check suspicious messages for common scam patterns
+                and learn how to protect your personal information.
+            </p>
+        </section>
+
+        <section class="panel">
+            <h2>🔎 Message Security Scanner</h2>
+
+            <p class="subtitle" style="margin:0; text-align:left;">
+                Paste an SMS, WhatsApp message, or email below.
+            </p>
+
+            <form method="POST">
+                <label for="message">Your message</label>
+
+                <textarea id="message" name="message" maxlength="5000"
+                    placeholder="Paste your suspicious message here..." required>{{ message }}</textarea>
+
+                <button type="submit">🛡️ Analyze Message</button>
+            </form>
+
+            {% if result %}
+            {% if result %}
+            <div class="result {{ risk_class }}" aria-live="polite">
+                <h3>Analysis Result</h3>
+
+                <p><strong>Risk Level:</strong> {{ risk }}</p>
+                <p>{{ result }}</p>
+
+                <h3>Warning Signs</h3>
+
+                {% if warnings %}
+                <ul>
+                    {% for warning in warnings %}
+                    <li>
+                        <strong>{{ warning.category }}</strong>
+                        — Detected: {{ warning.phrases }}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p>No listed warning phrases were found.</p>
+                {% endif %}
+
+                <p>
+                    <strong>Safety advice:</strong>
+                    Never share OTPs or passwords. Verify payment requests
+                    independently and avoid unknown links.
+                </p>
+            </div>
+            {% endif %}
+
+            {% endif %}
+        </section>
+
+        <section class="tips">
+            <div class="tip">
+                <div class="icon">🔐</div>
+                <h3>Protect Your OTP</h3>
+                <p>Never share one-time passwords with callers or strangers.</p>
+            </div>
+
+            <div class="tip">
+                <div class="icon">🔗</div>
+                <h3>Check Links</h3>
+                <p>Avoid unknown links and unexpected attachments.</p>
+            </div>
+
+            <div class="tip">
+                <div class="icon">💳</div>
+                <h3>Verify Payments</h3>
+                <p>Confirm urgent payment requests independently.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        ScamShield AI · Personal Security Project · Created by Ansari Arif
+        <br><br>
+        This tool can make mistakes. A low-risk result does not prove a message is safe.
+    </footer>
+</body>
+
+</html>
