@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan History - ScamShield AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            margin: 0;
+            padding: 25px;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #0f172a;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .card {
+            background: white;
+            padding: 18px;
+            margin-bottom: 14px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #00000010;
+            overflow-wrap: anywhere;
+        }
+
+        .risk {
+            font-weight: bold;
+        }
+
+        .High {
+            color: #dc2626;
+        }
+
+        .Medium {
+            color: #d97706;
+        }
+
+        .Low {
+            color: #16a34a;
+        }
+
+        .empty {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🛡️ ScamShield AI</h1>
+        <h2>Previous Scan History</h2>
+
+        <a class="back" href="/">← Back to Scanner</a>
+
+        {% if scans %}
+        {% for scan in scans %}
+        <div class="card">
+            <p><strong>Scan ID:</strong> {{ scan.id }}</p>
+            <p><strong>Message:</strong> {{ scan.message }}</p>
+            <p>
+                <strong>Risk Level:</strong>
+                <span class="risk {{ scan.result }}">
+                    {{ scan.result }}
+                </span>
+            </p>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="empty">
+            No scan history found. Scan a message first!
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>
